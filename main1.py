@@ -16,7 +16,13 @@ while True:
     print("3. View Feedback Report")
     print("4. Exit")
 
-    choice = int(input("Enter your choice: "))
+    try:
+        choice = int(input("Enter your choice: "))
+
+    except ValueError:
+        print("Please enter a number from 1 to 4.")
+        continue
+
 
     if choice == 1:
         show_menu()
